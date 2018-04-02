@@ -14,12 +14,17 @@
   ],
   "license": "MIT",
   "scripts": {
+    "develop": "gatsby develop -p 8680 -H 0.0.0.0",
     "build": "gatsby build",
-    "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "gatsby serve",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "firebase-serve": "node_modules/.bin/firebase serve -p 8680 -o 0.0.0.0",
+    "deploy": "node_modules/.bin/firebase deploy"
+    
   },
   "devDependencies": {
-    "prettier": "^1.11.1"
+    "prettier": "^1.11.1",
+    "firebase-tools": "^3.17.7"
   }
 }
